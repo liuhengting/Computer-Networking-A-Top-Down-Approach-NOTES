@@ -6,13 +6,13 @@ serverSocket = socket(AF_INET, SOCK_STREAM)
 #Fill in end
 while True:
     #Establish the connection
-    print 'Ready to serve...'
-    connectionSocket, addr =   #Fill in start  #Fill in end
+    print ('Ready to serve...')
+    connectionSocket, addr = serverSocket.accept()
     try:
-        message =   #Fill in start  #Fill in end
+        message =   connectionSocket.recv(1024)
         filename = message.split()[1]
         f = open(filename[1:])
-        outputdata = #Fill in start  #Fill in end
+        outputdata = f.read()
         #Send one HTTP header line into socket
         #Fill in start
         #Fill in end
